@@ -11,10 +11,9 @@ int main(int argc, char *argv[])
    int charCount;
    int wordCount;
    int lineCount;
-   int wordState = 1;
+   int wordState = 0;
    int fd;
    ssize_t nread;
-   long total = 0;
    if ((fd = open(argv[1], O_RDONLY)) == -1) 
       perror(argv[1]);
 	while( (nread = read(fd, buffer,    BUFSIZE)) > 0){
